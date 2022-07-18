@@ -7,8 +7,28 @@
  */
 public class practice_01 {
     public static void main(String[] args) {
-        //位运算符
-
+        //运算符的优先级等
+    }
+    public static void main8(String[] args) {
+        //条件运算符：表达式1？表达式2：表达式3-------必须是布尔表达式
+        //由于有返回值，所以需要去接收它
+        int a = 10;
+        int b = 20;
+        int c = a>b?a:b;
+    }
+    public static void main7(String[] args) {
+        //移位运算符：< >
+        //右移的时候，正数补0，负数补1
+        //>>> 无符号右移，不管你是正数还是负数，统统补0（没有无符号左移）
+        System.out.println(-9>>2);//-3
+        System.out.println(-27>>3);//-4
+        System.out.println(-45>>2);//-12
+        //负数右移的时候要向上（小）取整
+    }
+    public static void main6(String[] args) {
+        //位运算符：& | ~ ^
+        int a = 0x0000000f;
+        System.out.println(~a);//-16----fffffff0
     }
     public static void main5(String[] args) {
         //&& || !

@@ -8,6 +8,7 @@ import java.util.Scanner;
  * Time: 22:11
  */
 public class practice_01 {
+
     public static void main(String[] args) {
         //键入
         Scanner scanner = new Scanner(System.in);//对象

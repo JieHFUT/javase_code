@@ -28,7 +28,7 @@ public class practice_01 {
 
     public static void main(String[] args) {
         //方法 public static 返回值类型 方法名（形式参数列表）{方法体}；
-        //方法必须写在类里面，方法不能嵌套定义
+        //方法必须写在类里面，而且方法不能嵌套定义
         int ret = add(10,20);
         System.out.println(ret);
 

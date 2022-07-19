@@ -8,8 +8,28 @@ import java.util.Scanner;
  * Time: 14:20
  */
 public class practice_01 {
-
-
+    //Math.sqrt();  Math.pow();  进入Math类 alt+7
+    public static void perfect(){
+        //求位数
+        for(int i = 0; i <= 10_000_000; i++){
+            int j = i;
+            int count = 0;
+            while(i != 0){
+                i = i / 10;
+                count++;
+            }
+            //求次幂和
+            i = j;
+            int sum = 0;
+            for(int k = 1; k <= count; k++){
+                sum += Math.pow(j % 10, count);
+                j = j / 10;
+            }
+            if(i == sum){
+                System.out.println(i);
+            }
+        }
+    }
     /**
      *
      * @param year 年份
@@ -35,7 +55,10 @@ public class practice_01 {
         System.out.println(ret);
 
         Scanner scanner = new Scanner(System.in);
+        System.out.println("请输入一个年份：");
         int year  = scanner.nextInt();
         boolean flg = isLeapYear(year);
+
+        perfect();
     }
 }

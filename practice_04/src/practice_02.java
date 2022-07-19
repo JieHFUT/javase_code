@@ -8,6 +8,7 @@ import java.util.Scanner;
  * Time: 15:51
  */
 public class practice_02 {
+
     //输出乘法口诀表
     public static void printMultiplicationTable(){
         int i = 0;

@@ -8,6 +8,8 @@ import java.util.Scanner;
  * Time: 14:20
  */
 public class practice_01 {
+
+
     /**
      *
      * @param year 年份

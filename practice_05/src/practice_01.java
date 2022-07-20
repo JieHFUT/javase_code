@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Time: 14:20
  */
 public class practice_01 {
-
+    //输出一个数的二进制中的奇数二进制、偶数二进制
     public static void printOddEve(int n){
         int i = 0;
         for(i = 31; i >= 1; i -= 2){
@@ -58,6 +58,7 @@ public class practice_01 {
     }
     //Math.sqrt();  Math.pow();  进入Math类 alt+7
     public static void perfectNumber(){
+        //找完全数
         //求位数
         for(int i = 0; i <= 10_000_000; i++){
             int j = i;
@@ -136,5 +137,20 @@ public class practice_01 {
         System.out.println("请输入您要输入的数字：");
         int num5 = scanner.nextInt();
         printOddEve(num5);
+
+        //溢出多少可以画二进制圆参考
+        short a1 = 128;
+        short a2 = 120;
+        byte b1 = (byte)a1;
+        byte b2 = (byte)a2;
+        System.out.println(b1);//-128
+        System.out.println(b2);//120
+
+        //-128的二进制码如何表示
+        //1000 0000 -> 1 1000 0000(-128)
+        //             1 0111 1111
+        //             1 0000 0000
+
+
     }
 }

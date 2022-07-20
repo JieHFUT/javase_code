@@ -8,18 +8,23 @@ import java.util.Scanner;
  * Time: 14:20
  */
 public class practice_01 {
+
+    public static void printOddEve(int n){
+        int i = 0;
+        for(i = 31; i >= 1; i -= 2){
+            System.out.print((n >> i) & 1);
+        }
+        System.out.println();
+        for(i = 30; i >= 0; i -= 2){
+            System.out.print((n >> i) & 1);
+        }
+    }
     //给一个正整数N；判断这个数字是不是2的K次方！不用求解K是多少。
     public static boolean judgeNumber(int n){
-        int count = 0;
-        if(n != 0){
-            count++;
-            n = n & (n-1);
-        }
-        if(count == 1){
-            return true;
-        }else {
-            return false;
-        }
+       if((n & (n-1)) == 0){
+           return true;
+       }
+       return false;
     }
     public static int countTheNumbertOfOne3(int n){
         int count = 0;
@@ -127,5 +132,9 @@ public class practice_01 {
         }else {
             System.out.println("该数不是2的K次方！");
         }
+
+        System.out.println("请输入您要输入的数字：");
+        int num5 = scanner.nextInt();
+        printOddEve(num5);
     }
 }

@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created with IntelliJ IDEA.
  * Description:
@@ -12,7 +14,7 @@ public class practice_01 {
         int[] array1 = {1,2,3,4,5,6,7,8,9,10};
         int[] array2 = new int[]{1,2,3,4,5,6,7,8,9,10};
         System.out.println(array1.length);
-        System.out.println(array1[10]);//ArrayIndexOutOfBoundsException----与c不同，不允许数组越界
+        //System.out.println(array1[10]); ---- ArrayIndexOutOfBoundsException----与c不同，不允许数组越界
 
 
         //动态初始化
@@ -27,7 +29,25 @@ public class practice_01 {
         int[] array5 = {1,2,3,4,5};
         //array5 = {2,3,4,5,6}; ------- 报错
 
+        //遍历数组
+        for(int i = 0; i < array1.length; i++){
+            System.out.print(array1[i] + " ");
+        }
+        System.out.println();
 
+        //for-each ---- 增强for循环
+        for (int x :
+             array1) {
+            System.out.print(x +" ");
+        }
+        System.out.println();
 
+        //借助Java本身提供的一些方法来实现数组的打印 --- Arrays类(帮助操作数组) - 可帮助手册--学习
+        //toString把参数的数组转换为字符串进行输出，返回值是String
+        String str1 = Arrays.toString(array1);
+        System.out.println(str1);//[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        //数组的底层
+        //.java文件--->编译javac----->字节码文件.class (JVM上运行)
     }
 }

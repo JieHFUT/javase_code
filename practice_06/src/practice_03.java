@@ -31,5 +31,6 @@ public class practice_03 {
         }
         System.out.println(Arrays.toString(array3));
 
+
     }
 }

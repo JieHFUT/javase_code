@@ -69,7 +69,7 @@ public class practice_02 {
 //            }
 //        }
         int left = 0;
-        int right = array.length;
+        int right = array.length - 1;
         int mid = (left + right) / 2;
         while(left < right){
             if(array[mid] == target){

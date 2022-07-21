@@ -34,12 +34,18 @@ public class practice_02 {
      */
     public static int[] bubbleSort(int[] array){
         for (int i = 1; i < array.length; i++) {
+            //优化代码：某一次有序之后就不再进行比较 - 加flg
+            boolean flg = false;
             for (int j = 0; j < array.length - i; j++) {
                 if(array[j] > array[j + 1]){
                     int tmp = array[j +1];
                     array[j + 1] = array[j];
                     array[j] = tmp;
+                    flg = true;
                 }
+            }
+            if(flg = false){
+                break;
             }
         }
         return array;

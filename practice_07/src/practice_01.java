@@ -10,7 +10,19 @@ import java.util.Arrays;
  */
 public class practice_01 {
 
-
+    public static int[] reverse(int[] array){
+        int low = 0;
+        int high = array.length - 1;
+        int tmp = 0;
+        while(low < high){
+            tmp = array[low];
+            array[low] = array[high];
+            array[high] = tmp;
+            low++;
+            high--;
+        }
+        return array;
+    }
     public static void main(String[] args) {
         //数组
         int[] array1 = {1,2,3,4};
@@ -38,7 +50,9 @@ public class practice_01 {
         Arrays.fill(array6,2,5,1);
         System.out.println("选择填充：" + Arrays.toString(array6));//选择填充：[0, 0, 1, 1, 1, 0, 0, 0, 0, 0]
 
-
-
+        //数组逆置
+        int[] array7 = new int[]{2,3,4,5,6,7,8};
+        int[] array8 = reverse(array7);
+        System.out.println(Arrays.toString(array8));
     }
 }

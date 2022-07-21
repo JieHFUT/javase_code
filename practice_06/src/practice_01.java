@@ -61,6 +61,33 @@ public class practice_01 {
         int[] array4 = {1,2,3,4,5,6,7,8};
         String ret = myToString(array4);
         System.out.println(ret);
+
+        //数组的拷贝
+        int[] array5 = {1,2,3,4};
+        int[] arrayCopy = new int[array5.length];
+        for (int i = 0; i < array5.length; i++) {
+            arrayCopy[i] = array5[i];
+        }
+        System.out.println(Arrays.toString(arrayCopy));
+
+        //IDEA自带的拷贝
+        /**
+         * 你要拷贝的数组，长度，返回值是int[]
+         */
+        int[] array6 = {1,2,3,4,5,6};
+        int[] array7 = Arrays.copyOf(array6,array6.length);//扩容多余的为0
+        System.out.println(Arrays.toString(array7));
+
+        //拷贝
+        int[] array8 = {2,3,4,5};
+        int[] array9 = new int[array8.length];
+        System.arraycopy(array8,2,array9,3,1);
+        System.out.println(Arrays.toString(array9));//[0, 0, 0, 4]
+
+        //拷贝
+        int[] array10 = {3,4,5,6,7,8};
+        int[] array11 = array10.clone();//在堆山产生一个副本，把副本的地址传给array11
+        System.out.println(Arrays.toString(array11));
     }
     //int[] array = {1,2,3,4,5,6,7,8}; ------------------ 不在mian里面的引用在堆里面
     public static void main1(String[] args) {

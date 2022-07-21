@@ -8,7 +8,62 @@ import java.util.Arrays;
  * Time: 16:46
  */
 public class practice_01 {
+    public static String myToString(int[] array){
+        String str = "[";
+        for(int i = 0; i < array.length; i++){
+            if(i == array.length-1){
+                str = str + array[i];
+
+            }else {
+                str = str + array[i] + ", ";
+            }
+        }
+        str = str + "]";
+        return str;
+    }
+    public static int[] func4(){
+        int array[] = {1,2,3,4,5};
+        return array;
+    }
+    public static void func3(int[] array){
+        array[0] = 99;
+    }
+    public static void func2(int[] array){
+        array = new int[]{2,3,4,5,6,7,8,9};
+    }
+    public static void func1(int a){
+        a = 20;
+    }
+
     public static void main(String[] args) {
+        int x = 10;
+        func1(x);
+        System.out.println(x);//10 - 虚拟机栈上的按值传递
+
+
+        //引用类型的传递
+        int[] array1 = {1,2,3,4,5,6,7,8};
+        func2(array1);
+        System.out.println(Arrays.toString(array1));//[1, 2, 3, 4, 5, 6, 7, 8]
+
+        //引用类型的传递
+        int[] array2 = {1,2,3,4,5,6};
+        func3(array2);
+        System.out.println(Arrays.toString(array2));//[99, 2, 3, 4, 5, 6]
+
+        //数组作为返回值
+        //在Java里面全部都是按值传递的，地址也是值
+        int array3[] = func4();
+        System.out.println(Arrays.toString(array3));//[1, 2, 3, 4, 5]
+        //栈上的局部变量array被回收，但是堆上的对象不会被回收
+
+        //my- toString
+        int[] array4 = {1,2,3,4,5,6,7,8};
+        String ret = myToString(array4);
+        System.out.println(ret);
+    }
+    //int[] array = {1,2,3,4,5,6,7,8}; ------------------ 不在mian里面的引用在堆里面
+    public static void main1(String[] args) {
         //数组的学习
         //中括号当中不能有任何的数字
         int[] array1 = {1,2,3,4,5,6,7,8,9,10};
@@ -49,5 +104,23 @@ public class practice_01 {
 
         //数组的底层
         //.java文件--->编译javac----->字节码文件.class (JVM上运行)
+
+        System.out.println(array1);//[I@1b6d3586 ------- 存的是真实地址的哈希值，@前面的I代表的是整型数组, [代表是数组
+
+        int[] array6 = null;//不指向任何对象
+        //System.out.println(array6.length);//NullPointerException - 空指针异常
+        System.out.println(array6);//null
+
+
+        //引用赋值同对象
+        int array7[] = {1,2,3,4,5,6,7,8};
+        int array8[] = array7;
+        System.out.println(array7);//[I@4554617c
+        System.out.println(array8);//[I@4554617c
+
+        //引用不去赋给另外一个引用时就算指向对象内容一样，对象也不一样
+        int array9[] = {1,2,3,4,5,6,7,8};
+        System.out.println(array9);//[I@74a14482
+
     }
 }

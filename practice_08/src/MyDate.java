@@ -38,6 +38,8 @@ public class MyDate {
         myDate1.setDate(2022,7,21);
         myDate1.printDate();//2022年7月21日
 
+
+
         MyDate myDate2 = new MyDate();
         myDate2.setDate(2023,8,22);
         myDate2.printDate();//2023年8月22日

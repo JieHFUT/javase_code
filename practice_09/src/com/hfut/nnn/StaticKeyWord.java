@@ -24,5 +24,8 @@ public class StaticKeyWord {
         Student student3 = null;
         System.out.println(student3.classes);//信管20-1班
 
+
+        student1.getTestPrivateFunc();
+
     }
 }

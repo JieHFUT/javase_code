@@ -54,6 +54,14 @@ public class Student {
                 '}';
     }
 
+    private void testPrivateFunc(){
+        System.out.println("测试一下私有的成员方法在同包其他类之中如何封装！");
+    }
+
+    public void getTestPrivateFunc(){
+        this.testPrivateFunc();
+    }
+
     public void doClass(){
         System.out.println(this.name + "写作业！");
     }

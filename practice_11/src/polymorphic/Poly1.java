@@ -27,7 +27,7 @@ class Son extends Father{
     public void play(){
         System.out.println(this.name + "正在玩游戏！");
     }
-
+    @Override
     //方法的重写
     public void eat(){
         System.out.println(this.name + "不仅要吃饭还要喝饮料！");

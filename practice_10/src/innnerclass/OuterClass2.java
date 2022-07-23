@@ -22,11 +22,8 @@ public class OuterClass2 {
      * 1、如何实例化静态内部类 --- 不依赖外部类实例对象
      * 2、OuterClass2.InterClass interClass = new OuterClass2.InterClass();
      * 3、在静态内部类当中，只能访问外部类的静态的成员，除非在内部类中实例化外部类的对象
-     * 4、
-     * 5、
-     * 6、
-     * 7、
-     * 8、
+     * 4、静态内部类中创建了一个外部类对象 ------- 引用在堆上的实例
+     *
      */
     static class InterClass{
 
@@ -61,11 +58,11 @@ public class OuterClass2 {
 
     public static void main(String[] args) {
         //不需要实例化外部类对象
-        OuterClass2.InterClass interClass = new OuterClass2.InterClass();
-        interClass.method();
+        OuterClass2.InterClass interClass1 = new OuterClass2.InterClass();
+        interClass1.method();
 
-
-
+        OuterClass2.InterClass interClass2 = new OuterClass2.InterClass(new OuterClass2());
+        interClass2.method();//NullPointerException
 
     }
 

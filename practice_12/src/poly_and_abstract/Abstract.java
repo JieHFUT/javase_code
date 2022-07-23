@@ -1,4 +1,4 @@
-package poly_and_interface;
+package poly_and_abstract;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,8 +7,6 @@ package poly_and_interface;
  * Date: 2022-07-24
  * Time: 4:11
  */
-
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
 
 /**
  * 1、abstract修饰的方法叫做抽象方法，抽象方法没有实现过程，甚至花括号都可以省略不写
@@ -57,11 +55,6 @@ class NoEmpty extends Empty2{
 
 
 
-
-
-
-
-
 class Nomal extends Empty{
     @Override
     public void func1() {
@@ -97,7 +90,7 @@ class Nomal extends Empty{
 
 
 
-public class Interface {
+public class Abstract {
 
     public static void main(String[] args) {
 

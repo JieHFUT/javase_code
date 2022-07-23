@@ -1,4 +1,4 @@
-package poly_and_interface;
+package poly_and_abstract;
 
 /**
  * Created with IntelliJ IDEA.

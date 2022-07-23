@@ -6,7 +6,7 @@
  * Time: 4:25
  */
 public class InherAndPoly {
-    //继承和多态
+    //
 
 
 

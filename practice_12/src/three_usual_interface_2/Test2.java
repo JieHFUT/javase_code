@@ -1,5 +1,8 @@
 package three_usual_interface_2;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 /**
  * Created with IntelliJ IDEA.
  * Description:
@@ -34,7 +37,43 @@ class Teacher{
 
 
 
+
 //比较器
+class AgeComparator implements Comparator<Teacher>{
+
+    @Override
+    public int compare(Teacher o1, Teacher o2) {
+        return o1.age-o2.age;
+    }
+}
+
+class NameComparator implements Comparator<Teacher>{
+
+    @Override
+    public int compare(Teacher o1, Teacher o2) {
+        return o1.name.compareTo(o2.name);
+    }
+}
+
+class ScoreComparator implements Comparator<Teacher>{
+
+    @Override
+    public int compare(Teacher o1, Teacher o2) {
+        return (int) (o1.score- o2.score);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -43,8 +82,27 @@ class Teacher{
 public class Test2 {
 
     public static void main(String[] args) {
-        Teacher teacher1 = new Teacher("语文老师",34,34.32);
-        Teacher teacher2 = new Teacher("数学老师",47,98.34);
+
+        Teacher[] teachers = new Teacher[3];
+        teachers[0] = new Teacher("语文老师",34,34.32);
+        teachers[1] = new Teacher("数学老师",47,98.34);
+        teachers[2] = new Teacher("政治老师",67,23.32);
+
+        AgeComparator ageComparator = new AgeComparator();
+        Arrays.sort(teachers, ageComparator);
+        System.out.println(Arrays.toString(teachers));
+
+
+        ScoreComparator scoreComparator = new ScoreComparator();
+        Arrays.sort(teachers,scoreComparator);
+        System.out.println(Arrays.toString(teachers));
+
+
+        NameComparator nameComparator = new NameComparator();
+        Arrays.sort(teachers,nameComparator);
+        System.out.println(Arrays.toString(teachers));
+
+
 
     }
 

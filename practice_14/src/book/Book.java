@@ -53,21 +53,19 @@ public class Book {
         this.type = type;
     }
 
-    public boolean isBorrowed() {
-        return isBorrowed;
-    }
+    public boolean isBorrowed() { return isBorrowed; }
 
-    public void setBorrowed(boolean borrowed) {
-        isBorrowed = borrowed;
-    }
+    public void setBorrowed(boolean borrowed) { isBorrowed = borrowed; }
 
     @Override
     public String toString() {
-        return "book{" +
+        return "Book{" +
                 "name='" + name + '\'' +
                 ", author='" + author + '\'' +
                 ", price=" + price +
                 ", type='" + type + '\'' +
+                ","+((isBorrowed == true)?"已借出":"未借出") +
+              //  ", isBorrowed=" + isBorrowed +
                 '}';
     }
 }

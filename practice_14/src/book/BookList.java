@@ -39,4 +39,24 @@ public class BookList {
     public void setUsedSize(int usedSize) {
         this.usedSize = usedSize;
     }
+
+
+    /**
+     * 获取pos下标的书
+     * @param pos
+     * @return
+     */
+    public Book getPos(int pos){
+        return books[pos];
+    }
+
+    /**
+     * 给数组的pos位置放一本书
+     * @param pos
+     * @return
+     */
+    public void setPos(int pos, Book book){
+        books[pos] = book;
+    }
+
 }

@@ -11,7 +11,35 @@ package String;
 public class StringConstant {
     //常量池
 
+
     public static void main(String[] args) {
+        //字符串的修改
+        String str1 = "hello";
+        str1 += " world";
+        System.out.println(str1);
+    }
+
+
+
+
+
+
+    public static void main2(String[] args) {
+        //字符串的不可变
+        String str1 = "hello";
+
+        //被final修饰的引用其指向不能被改变，但是可以修改里面的内容
+        final int[] array1 = {1,2,3};
+        //array1 = new int[]{2,3,4};
+        array1[1] = 8;
+
+    }
+
+
+
+
+
+    public static void main1(String[] args) {
         String str1 = "hello";
         String str2 = "hello";
         String str3 = new String("hello");
@@ -33,20 +61,16 @@ public class StringConstant {
 
 
 
-        //intern方法
+        //intern方法 ---- 将其所指向的对象放到常量池当中
+        char[] ch1 = new char[]{'a','b','c'};
+        String  str9 = new String(ch1);
 
+//        String str10 = "abc";
+//        System.out.println(str9 == str10);//false
 
-
-
-
-
-
-
-
-
-
-
-
+        str9.intern();//手动入池
+        String str11 = "abc";
+        System.out.println(str11 == str9);//true
 
     }
 
